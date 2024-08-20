@@ -61,20 +61,26 @@ const cards = [
   {
     title: "Sales",
     progression: 12,
-    amount: 84.44,
-    Label: "View sales",
+    amount: 1244.43,
+    label: "View sales",
     description: "Sales of March 2024",
-    icon: "solar: ticket-sale-outline"
+    icon: "solar:ticket-sale-outline"
   },
   {
-    title: "Sales",
-    progression: 12,
-    amount: 84.44
+    title: "Refunds",
+    progression: 8,
+    amount: 84.44,
+    label: "View refunds",
+    description: "Refunds since beginning of year",
+    icon: "heroicons-outline:receipt-refund"
   },
   {
-    title: "Sales",
-    progression: 12,
-    amount: 84.44
+    title: "Payouts",
+    progression: 14,
+    amount: 899.99,
+    label: "View payouts",
+    description: "Payouts of this week",
+    icon: "tabler:zoom-money"
   }
 ]
 
@@ -106,13 +112,10 @@ onMounted(() => {
           <Chart v-if="data.length > 0" :currentCategory="currentCategory" :data="data" />
         </TabsContent>
       </Tabs>
-      <section class=" bg-neutral-200 w-full h-[150px]">
-        Chart
-      </section>
     </main>
     <footer>
-      <div class="flex ietms-center gap-4">
-        <div v-for="(item, index) in 3" :key="index" class=" bg-neutral-200 w-full h-[100px]">I'll have 3 differents cards.</div>
+      <div class="grid lg:grid-cols-3 gap-4">
+          <Card class="flex-1" v-for="(item, index) in cards" :key="index" :card="item"/>
       </div>
     </footer>
   </div>
