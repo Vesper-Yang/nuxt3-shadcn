@@ -99,10 +99,10 @@ onMounted(() => {
         <p>Hi, welcome back Bunan!</p>
         <h1>Dashboard</h1>
       </div>
-      <div class=" bg-neutral-200 h-[36px] w-[120px]"></div>
+      <ProductNew />
     </header>
     <main class="grid gap-4">
-      <Tabs default-value="today" @click="setCategory">
+      <Tabs default-value="Today" @click="setCategory">
         <TabsList>
           <TabsTrigger v-for="(item, index) in list" :key="index" :value="item.title">
             {{ item.title }}

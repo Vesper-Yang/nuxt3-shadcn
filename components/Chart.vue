@@ -149,6 +149,6 @@ onMounted(() => {
 
 <template>
   <div>
-    <highchart class="h-[300px] border p-4 rounded-lg" v-if="data.length > 0" :options="options" />
+    <highchart class="h-[300px] border p-4 rounded-lg" :options="options" />
   </div>
 </template>

@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/icon": "^1.4.5",
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@vueuse/core": "^11.0.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.427.0",
