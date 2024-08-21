@@ -1,5 +1,4 @@
 <script setup>
-  const loading = ref(false)
   const name = ref("Vesper Yang")
   const description = ref("CTO & Youtuber")
 </script>
