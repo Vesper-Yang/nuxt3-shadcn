@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { onMounted, ref } from "vue";
   import { columns } from "./columns";
+import DataTableOld from "~/components/DataTableOld.vue";
 
 
   const data = ref<any>([])
@@ -38,7 +39,7 @@ onMounted(() => {
       </div>
     </header>
     <div>
-      <DataTable :columns="columns" :data="data" />
+      <DataTableOld :columns="columns" :data="data" />
     </div>
   </div>
 

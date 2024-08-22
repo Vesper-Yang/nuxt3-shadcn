@@ -92,7 +92,7 @@ onMounted(() => {
 
 </script>
 
-<template>
+<template>sw
   <div class="grid gap-4">
     <header class="flex items-start justify-between">
       <div class="grow">
