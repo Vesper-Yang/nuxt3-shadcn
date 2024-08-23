@@ -126,7 +126,7 @@ const table = useVueTable({
       <Table>
         <TableHeader>
           <TableRow v-for="headerGroup in table.getHeaderGroups()" :key="headerGroup.id">
-            <TableHead v-for="header in headerGroup.headers" :key="header.id" class="w-[300px]">
+            <TableHead v-for="header in headerGroup.headers" :key="header.id" class="px-3 w-[300px]">
               <FlexRender
                 v-if="!header.isPlaceholder" :render="header.column.columnDef.header"
                 :props="header.getContext()"
@@ -138,7 +138,7 @@ const table = useVueTable({
           <template v-if="table.getRowModel().rows?.length">
             <template v-for="row in table.getRowModel().rows" :key="row.id">
               <TableRow :data-state="row.getIsSelected() ? 'selected' : undefined">
-                  <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id" class=" p-3">
+                  <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id" class="p-3">
                       <FlexRender :render="cell.column.columnDef.cell" :props="cell.getContext()" />
                   </TableCell>
               </TableRow>
